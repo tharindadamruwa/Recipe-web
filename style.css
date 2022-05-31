@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  font-family: "Roboto",sans-serif;
+}
+
+.app {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  background: #272a2f;
+}
+
+.hidden {
+  display: none;
+}
+
+.app .screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-screen {
+  overflow-y: auto;
+}
+
+.main-screen .logo-1 {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background: #222425;
+  border-bottom: solid 1px #9b95a6;
+  margin-bottom: 10px;
+}
+
+.main-screen .logo-1 .logo {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.main-screen .logo-1 .creater-name {
+  font-family: 'Dongle', sans-serif;
+  font-size: 18px;
+}
+
+.main-screen .categories {
+  padding: 10px 15px 15px;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+}
+
+.main-screen .categories > div {
+  background: #485b6b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.main-screen .categories > div.active {
+  background: #4c98ec;
+  color: #fff;
+}
+
+.main-screen .categories::-webkit-scrollbar {
+  display: none;
+}
+
+.main-screen .recipe-list {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-screen .recipe-list > .item {
+  border: 1px solid #485b6b;
+  width: calc(calc(100% / 2) - 5px);
+}
+
+.main-screen .recipe-list > .item .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-screen .recipe-list > .item .details {
+  padding: 10px;
+}
+
+.main-screen .recipe-list > .item .details h2 {
+  color: #fff;
+  font-size: 16px;
+}
+
+.recipe-screen {
+  overflow: hidden;
+}
+
+.recipe-screen .back-btn  {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: fixed;
+  padding-right: 3px;
+  z-index: 2;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.recipe-screen .back-btn .btn {
+  margin-left: 17px;
+  margin-top: 17px;
+}
+
+.recipe-screen .thumbnail {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+
+.recipe-screen .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.recipe-screen .details {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: calc(calc(100% / 2) + 20px);
+  padding: 20px;
+  overflow-y: scroll;
+  border-radius: 25px 25px 0px 0px;
+  background: #222;
+}
+
+.recipe-screen .details h2 {
+  font-size: 25px;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+.recipe-screen .details > div {
+  margin: 10px 0px;
+  color: #fff;
+}
+
+.recipe-screen .details > div ol,
+.recipe-screen .details > div ul {
+  padding: 10px 20px;
+}
